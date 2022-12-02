@@ -6,7 +6,6 @@ name: Angular App CI
 on:
   pull_request:
     branches: [ "main" ]
-  pull_request_target:
     types:
       - opened
       - synchronized
