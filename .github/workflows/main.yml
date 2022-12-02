@@ -6,6 +6,15 @@ name: Angular App CI
 on:
   pull_request:
     branches: [ "main" ]
+  pull_request_target:
+    types:
+      - opened
+      - synchronized
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
 
 jobs:
   build:
@@ -39,3 +48,4 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.5"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          REQUIRED_LABELS: automerge
