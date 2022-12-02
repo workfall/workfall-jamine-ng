@@ -37,6 +37,9 @@ jobs:
 
   automerge:
     runs-on: ubuntu-latest
+
+    needs: [build]
+
     steps:
       - id: automerge
         name: automerge
