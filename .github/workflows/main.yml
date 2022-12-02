@@ -6,6 +6,13 @@ name: Angular App CI
 on:
   pull_request:
     branches: [ "main" ]
+  pull_request_review:
+    types:
+      - submitted
+  check_suite:
+    types:
+      - completed
+  status: {}
 
 jobs:
   build:
@@ -27,3 +34,12 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run test-ci
+
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.5"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
