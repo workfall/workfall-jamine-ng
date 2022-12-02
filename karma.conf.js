@@ -43,6 +43,16 @@ module.exports = function (config) {
         flags: ['--no-sandbox', '--disable-gpu']
       }
     },
+    thresholds: {
+      emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+      // thresholds for all files
+      global: {
+        statements: 95,
+        lines: 95,
+        branches: 95,
+        functions: 95
+      },
+    }
   });
 };
 
