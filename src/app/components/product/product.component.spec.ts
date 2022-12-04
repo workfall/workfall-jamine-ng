@@ -40,4 +40,24 @@ describe('ProductComponent', () => {
     expect(component.category).toBeTruthy();
     expect(component.rating).toBeTruthy();
   });
+
+  it('should calculate full and half rating', () => {
+    spyOn(component, 'formatRatings').and.callThrough();
+
+    component.ngOnInit();
+
+    expect(component.fullStars).toBeLessThanOrEqual(5);
+    expect(component.emptyStars).toBeLessThanOrEqual(5);
+  });
+
+  it('should calculate full and half rating', () => {
+    component.data = MOCK_DATA.products[1];
+
+    spyOn(component, 'formatRatings').and.callThrough();
+
+    component.ngOnInit();
+
+    expect(component.fullStars).toBeLessThanOrEqual(5);
+    expect(component.emptyStars).toBeLessThanOrEqual(5);
+  });
 });

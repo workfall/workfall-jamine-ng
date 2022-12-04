@@ -12,7 +12,9 @@
   <mat-card-footer>
     <p class="footer-content price">$ {{price}}</p>
     <p class="footer-content">
-      <mat-icon color="primary" *ngFor="let rating of [1,2,3,4,5]">star_rate</mat-icon>
+      <span *ngIf="fullStarsArr.length > 0"><mat-icon color="primary" *ngFor="let rating of fullStarsArr">star</mat-icon></span>
+      <span *ngIf="halfStarPresent"><mat-icon color="primary">star_half</mat-icon></span>
+      <span *ngIf="emptyStarsArr.length > 0"><mat-icon color="primary" *ngFor="let rating of emptyStarsArr">star_border</mat-icon></span>
       ({{rating?.count}})
     </p>
   </mat-card-footer>
