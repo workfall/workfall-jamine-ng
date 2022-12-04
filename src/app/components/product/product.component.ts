@@ -9,6 +9,7 @@ import { Product, Rating } from 'src/app/services/api.service.mock-data';
 export class ProductComponent implements OnInit {
   @Input() data: Product | undefined;
   name: string | undefined;
+  price: number | undefined;
   imageURL: string | undefined;
   description: string | undefined;
   category: string | undefined;
@@ -19,6 +20,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = this.data?.title;
+    this.price = this.data?.price;
     this.imageURL = this.data?.image;
     this.description = this.data?.description;
     this.category = this.data?.category;
