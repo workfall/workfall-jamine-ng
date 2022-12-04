@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MaterialModule } from 'src/app/modules/material/material.module';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
 
 import { ProductsComponent } from './products.component';
 
@@ -8,7 +10,11 @@ describe('ProductsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductsComponent ]
+      declarations: [ ProductsComponent ],
+      imports: [
+        SharedModule,
+        MaterialModule
+      ]
     })
     .compileComponents();
 
