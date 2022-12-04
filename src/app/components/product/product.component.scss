@@ -32,7 +32,7 @@ img {
   width: 25%;
 }
 
-.product-info {
+.category-info, .product-info {
   text-align: center;
   overflow: hidden;
    text-overflow: ellipsis;
@@ -40,6 +40,11 @@ img {
    -webkit-line-clamp: 3; /* number of lines to show */
            line-clamp: 3;
    -webkit-box-orient: vertical;
+}
+
+.category-info {
+  margin-top: 5%;
+  font-style: italic;
 }
 
 .footer-content {
