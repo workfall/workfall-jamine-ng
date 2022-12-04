@@ -1,18 +1,18 @@
 <mat-card>
-  <mat-card-header>This is product heading</mat-card-header>
+  <mat-card-header>{{name}}</mat-card-header>
   <mat-divider></mat-divider>
   <mat-card-content>
     <div>
-      <img mat-card-image src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg" />
+      <img mat-card-image [src]="imageURL" />
     </div>
-    <p class="product-info">Content goes here</p>
-    <p class="product-info">Category: Content goes here</p>
+    <div class="product-info">{{description}}</div>
+    <div class="product-info">{{category}}</div>
   </mat-card-content>
   <mat-divider></mat-divider>
   <mat-card-footer>
     <p class="footer-content">
       <mat-icon color="primary" *ngFor="let rating of [1,2,3,4,5]">star_rate</mat-icon>
-      (240)
+      ({{rating?.count}})
     </p>
   </mat-card-footer>
 </mat-card>
