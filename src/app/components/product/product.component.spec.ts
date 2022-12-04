@@ -34,6 +34,7 @@ describe('ProductComponent', () => {
     component.ngOnInit();
 
     expect(component.name).toBeTruthy();
+    expect(component.price).toBeTruthy();
     expect(component.imageURL).toBeTruthy();
     expect(component.description).toBeTruthy();
     expect(component.category).toBeTruthy();
