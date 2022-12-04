@@ -1,1 +1,16 @@
-<p>product works!</p>
+<mat-card>
+  <mat-card-header>This is product heading</mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div>
+      <img mat-card-image src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg" />
+    </div>
+    <p class="product-info">Content goes here</p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-footer>
+    <p class="footer-content">
+      <mat-icon color="primary" *ngFor="let rating of [1,2,3,4,5]">star_rate</mat-icon>
+    </p>
+  </mat-card-footer>
+</mat-card>
