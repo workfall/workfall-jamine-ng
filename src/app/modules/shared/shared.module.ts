@@ -20,7 +20,8 @@ const IMPORTS_TO_BE_EXPORTED = [
     MaterialModule
   ],
   exports: [
-    ...IMPORTS_TO_BE_EXPORTED
+    ...IMPORTS_TO_BE_EXPORTED,
+    MaterialModule
   ]
 })
 export class SharedModule { }
